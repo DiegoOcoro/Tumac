@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Institucion Educativa Tumac</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <!-- <link rel="stylesheet" href="~/css/site.css" />-->
+        <link href="~/css/style.css" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+        <link href="~/lib/animate/animate.css" rel="stylesheet" />
+        <link href="~/lib/nivo-slider/css/nivo-slider.css" rel="stylesheet" />
+        <link href="~/lib/owlcarousel/owl.carousel.css" rel="stylesheet" />
+        <link href="~/lib/owlcarousel/owl.transitions.css" rel="stylesheet" />
+        <link href="~/lib/venobox/venobox.css" rel="stylesheet" />
+
+        <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/nivo-slider-theme.css" rel="stylesheet" />
+        <link href="~/css/responsive.css" rel="stylesheet" />
+
+        
+
+
+        
+
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+
+
+    <header>
+        <div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <nav class="navbar navbar-default">
+
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <a class="navbar-brand page-scroll sticky-logo" asp-action="Index">
+                                    <h1><span>I</span>CET</h1>
+                                </a>
+                            </div>
+
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active">
+                                        <a class="page-scroll" asp-action="Index">Inicio</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-action="#" class="dropdown-toggle" data-toggle="dropdown">Servicios<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Instalacion">Instalaciones</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Comedor">Comedor</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Uniformes">Uniformes</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Ampa">A.M.P.A</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Horarios">Horarios</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Act_Extraescolares">Actividades Extraescolares</a>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" asp-action="">Propuesta Educativa</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-action="" class="dropdown-toggle" data-toggle="dropdown" >Nosotros<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">                                           
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Modo_Manera">Modo o manera de educar</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Mision">Misión, Visión y Valores</a>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Historia">Historia</a>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" asp-action="">Sistema Academico</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" asp-action="Contact">Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!--  <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Comedor">Propuesta Educativa</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Instalacion">Instalaciones</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Comedor">Comedor</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Uniformes">Uniformes</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Ampa">A.M.P.A</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Horarios">Horarios</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Act_Extraescolares">Actividades Extraescolares</a>
+                </ul>
+
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Por_Tumac">Porque Tumac</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Modo_Manera">Modo o manera de educar</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Mision">Misión, Visión y Valores</a>
+                    <li><a class="dropdown-item" asp-controller="Home" asp-action="Historia">Historia</a>
+                </ul>
+            </li>
+
+            <li><a asp-area="" asp-controller="Home" asp-action="About">Sistema Academico</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
+        </ul>
+    </div>
+    </div>
+    </nav>-->
+
+
+    <partial name="_CookieConsentPartial" />
+
+
+    <!-- <div class="footer-area-bottom">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12 col-sm-12 col-xs-12">
+                     <div class="copyright text-center">
+                         <p>
+                             &copy; Copyright <strong>Institución Educativa Tumac</strong>. Derechos reservados
+                         </p>
+                     </div>
+                     <div class="credits">
+                         Diseñado por <a href="#">Diego Fernando Ocoro Stanford</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>-->
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2019 - Institucion Educativa Tumac, derechos reservados: Creado por Diego Ocoró</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+        <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="~/lib/venobox/venobox.min.js"></script>
+        <script src="~/lib/knob/jquery.knob.js"></script>
+        <script src="~/lib/wow/wow.js"></script>
+        <script src="~/lib/parallax/parallax.js"></script>
+        <script src="~/lib/easing/easing.js"></script>
+        <script src="~/lib/nivo-slider/js/jquery.nivo.slider.js"></script>
+        <script src="~/lib/appear/jquery.appear.js"></script>
+        <script src="~/lib/isotope/isotope.pkgd.js"></script>
+
+        <script src="~/js/main.js"></script>
+        <script src="~/contactform/contactform.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
